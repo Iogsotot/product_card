@@ -1,14 +1,21 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <div class="grid">
+
+    <div class="flex container">
       <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
       <Header class="header"/>
-      <ProductTitle class="product_title" msg="Название товара"/>
-      <PictureField class="picture_field"/>
-      <ProductInfo class="product_info"/>
-      <Tabs class="tabs"/>
-      <PopupBuyForm class="popup_buy_form"/>
+      
+      <main>
+          <ProductTitle class="product_title"/>
+
+        <section class="wrapper flex">      
+          <PictureField class="picture_field"/>
+          <ProductInfo class="product_info"/>
+        </section>
+
+        <Tabs class="tabs"/>
+        <PopupBuyForm class="popup_buy_form hidden"/>
+      </main>
       <Footer class="footer"/>
     </div>
   </div>
@@ -42,57 +49,70 @@ export default {
 
 <style>
 #app {
-  font-size: 12px;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Pt Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #333;;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1.5fr 1fr 4fr 1fr 1fr;
+html {
+  font-size: 14px;
+  font-family: 'Pt Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  direction: ltr;
+  box-sizing: border-box;
+  }
 
-  margin: 1.5rem;
-  margin-top: 4.5rem;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.header {
-  grid-row: 1/2;
-  grid-column: 1/3;
+li {
+  list-style: none;
+}
+
+a, a:active {
+  text-decoration: none;
+  color: #333;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.container {
+  padding: 0 calc(50% - 590px);
 }
 
 .product_title {
-  grid-row: 2/3;
-  grid-column: 1/3;
+  margin: 1rem;
+}
+
+.wrapper {
+  flex-direction: row;
+  justify-content: center; 
+  max-width: 100vw;
+  text-align: left;
+
+  
 }
 
 .picture_field {
-  grid-row: 3/4;
-  grid-column: 1/2;
+  min-height: 60vh;
+  width: 65%;
+  margin: 0 1rem;
 }
 
 .product_info {
-  grid-row: 3/4;
-  grid-column: 2/3;
+  max-width: 45%;
 }
 
-.tabs {
-  grid-row: 4/5;
-  grid-column: 1/3;
-}
-
-.popup_buy_form {
+.hidden {
   display: none;
-  grid-row: 1/2;
-  grid-column: 1/3;
-}
-
-.footer {
-  grid-row: 5/6;
-  grid-column: 1/3;
 }
 
 </style>

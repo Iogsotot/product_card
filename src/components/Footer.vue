@@ -1,12 +1,11 @@
 <template>
-  <div>
-    Здесь надо заверстать псевдо-подвал сайта
-  </div>
+  <footer>Здесь надо заверстать псевдо-подвал сайта</footer>
 </template>
 
 <script>
 export default {
   name: 'Footer',
+
   props: {
     msg: String
   }
