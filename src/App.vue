@@ -1,19 +1,19 @@
 <template>
   <div id="app">
 
-    <div class="flex container">
+    <div class="flex">
       <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
       <Header class="header"/>
       
       <main>
-          <ProductTitle class="product_title"/>
+        <ProductTitle class="product_title container"/>
 
-        <section class="wrapper flex">      
+        <section class="wrapper flex container">      
           <PictureField class="picture_field"/>
           <ProductInfo class="product_info"/>
         </section>
 
-        <Tabs class="tabs"/>
+        <Tabs class="tabs-block"/>
         <PopupBuyForm class="popup_buy_form hidden"/>
       </main>
       <Footer class="footer"/>
@@ -96,9 +96,7 @@ a, a:active {
   flex-direction: row;
   justify-content: center; 
   max-width: 100vw;
-  text-align: left;
-
-  
+  text-align: left;  
 }
 
 .picture_field {
@@ -109,6 +107,12 @@ a, a:active {
 
 .product_info {
   max-width: 45%;
+}
+
+.tabs-block {
+    margin: 1rem 0;
+    background-color: rgb(214, 240, 238, .8);
+    padding: 0;
 }
 
 .hidden {
