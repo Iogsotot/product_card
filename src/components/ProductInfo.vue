@@ -3,8 +3,12 @@
     <h1 class="price">{{price}} <span class="price-r"> &#8381; </span> </h1>
     <div class="rating">{{rating}}</div>
     <button>Купить в 1 клик</button>
-    <div class="in_stock">Наличие</div>
-    <ul class="hidden"> <li>более 10 шт. на складе</li></ul>
+  
+    <div class="in_stock" v-on:click="show = !show">Наличие</div>
+    <transition name="fade">
+      <p v-if="show">более 10 шт. на складе</p>
+    </transition>
+
     <ul class="shipment">
       <li class="shipment_city"><b>Санкт-Петербург.</b> <a href="#">Выбрать город доставки</a></li>
       <li class="delivery">Доставка - c 24 Ноября (265&#8381;)</li>
@@ -19,7 +23,9 @@ export default {
   data() {
     return { 
       price: '5 785',
-      rating: '100%' }
+      rating: '100%',
+      show: false
+      }
   },
   props: {
     msg: String
@@ -29,9 +35,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-
-
   .price {
     font-size: 3rem;
     font-weight: bold;
@@ -71,6 +74,22 @@ export default {
     transform: rotate(45deg);
   }
 
+  .fade-enter-active {
+  transition: all .3s ease;
+  }
+  .fade-leave-active {
+    transition: all .6s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .fade-enter {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  .fade-leave-to {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+
   .shipment {
     font-weight: 100;
     color: #727272;
@@ -90,9 +109,9 @@ export default {
     color: #333;
   }
 
-  .hidden {
+  /* .hidden {
   display: none;
-}
+} */
 
 
 
