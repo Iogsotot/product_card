@@ -13,7 +13,7 @@ export default {
   name: "product_title",
   data() {
     return {
-      title: "Исполинский козодой"
+      title: "Королевский питон"
     };
   }
 };

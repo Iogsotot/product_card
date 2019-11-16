@@ -13,7 +13,7 @@
           <ProductInfo class="product_info"/>
         </section>
 
-        <Tabs class="tabs-block"/>
+        <Tabs/>
         <PopupBuyForm class="popup_buy_form hidden"/>
       </main>
       <Footer class="footer"/>
@@ -107,12 +107,6 @@ a, a:active {
 
 .product_info {
   max-width: 45%;
-}
-
-.tabs-block {
-    margin: 1rem 0;
-    background-color: rgb(214, 240, 238, .8);
-    padding: 0;
 }
 
 .hidden {
