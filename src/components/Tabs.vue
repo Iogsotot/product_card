@@ -91,7 +91,24 @@
         </div>
       </b-tab>
       <b-tab title="Отзывы">
-        <aside class="reviews wrapper">I'm the tab with the very, very long title</aside>
+        <aside class="reviews wrapper">
+          <div class="reviews-list">
+            <div class="review-item">
+              Спасибо магазино "Под мшистым камнем" за такую чудесную змею! больше всего мне нравится с ним гулять - ведь тогда внимание мне 100% обеспечено!
+              <cite
+                class="review-author"
+              >Аксинья, г. Москва</cite>
+            </div>
+
+            <div class="review-item">
+              Иногда мне кажется, что он просто холодная рептилия, но когда я смотрю в его бездонные глаза, то вижу в них безкрайнее море любви! и даю ему лишнюю мышку. 
+              Спасибо магазину "Под мшистым камнем": быстрая доставка прямо домой, хорошие консультанты(помогли выбрать терр, мышек и даже шапочку для Питоши!) и чудесные цены. Следующую змею буду покупать однозначно только у вас!
+              <cite
+                class="review-author"
+              >Виталий, г. Санкт-Петербург</cite>
+            </div>
+          </div>
+        </aside>
       </b-tab>
     </b-tabs>
   </section>
@@ -148,9 +165,37 @@ export default {
   padding: 0.8rem 1.2rem;
 }
 
+/* Отзывы */
+.reviews {
+  display: block;
+}
+
+.review-item {
+  border-left: 3px solid #47649d;
+  margin: 0 2rem 2rem 0;
+  padding: 0 0 0 1.5rem;
+}
+
+.review-item p {
+  margin: 0 0 1.1rem 0;
+}
+
+.review-author {
+  display: block;
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* общие стили */
-.wrapper {
+.tabs .wrapper {
   padding: 1rem calc(50% - 590px);
+}
+
+.tabs .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
 }
 </style>
 
@@ -158,9 +203,9 @@ export default {
 /* переопределяем бутстраповские стили: */
 
 .tabs-block {
-    margin: 1rem 0;
-    background-color: rgb(214, 240, 238, .8);
-    padding: 0;
+  margin: 1rem 0;
+  background-color: rgb(214, 240, 238, 0.8);
+  padding: 0;
 }
 
 .contents .mt-3,
