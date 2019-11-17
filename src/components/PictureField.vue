@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="slider-block">
     <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop">
       <swiper-slide class="slide-1"></swiper-slide>
       <swiper-slide class="slide-2"></swiper-slide>
@@ -74,7 +74,8 @@ img {
 .swiper-container {
   background-color: #fff;
 }
-.swiper-slide {
+.slider-block .swiper-slide {
+  cursor: pointer;
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -98,6 +99,9 @@ img {
   height: 80% !important;
   width: 100%;
 }
+.swiper-container.gallery-top .swiper-slide {
+  width: 100% !important;
+}
 .gallery-thumbs {
   height: 20% !important;
   box-sizing: border-box;
@@ -111,4 +115,50 @@ img {
 .gallery-thumbs .swiper-slide-active {
   opacity: 1;
 }
+
+
+
+// @media (max-width: 576px) {
+//    html {
+//     font-size: 12px;
+//   }
+//     .container {
+//     padding: 0 calc(50vw - 270px);
+//     max-width: unset !important;
+//     margin: unset !important;
+//   }
+// }
+
+// @media (min-width: 575.98px){
+//   html {
+//     font-size: 12px;
+//   }
+//   .container {
+//     padding: 0 calc(50vw - 260px);
+//     max-width: unset !important;
+//     margin: unset !important;
+//   }
+// }
+
+// @media (min-width: 767.98px){
+//   html {
+//     font-size: 14px;
+//   }
+
+//   .container {
+//     padding: 0 calc(50vw - 370px)!important;
+//     max-width: unset !important;
+//     margin: unset !important;
+//   }
+// }
+
+// @media (min-width: 991.98px) {
+ 
+//   .container {
+//     padding: 0 calc(50vw - 480px)!important;
+//     max-width: unset !important;
+//     margin: unset !important;
+//   }
+// }
+
 </style>

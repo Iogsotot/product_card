@@ -87,26 +87,13 @@ footer {
 }
 
 .page-footer {
-  padding: 3.2rem 0 3.6rem;
-}
-
-.footer-top {
-  margin-bottom: 3.2rem;
-}
-
-.footer-logo {
-  /* width: 205px;
-  height: 55px; */
-}
-
-.footer-logo img {
-  /* width: 205px;
-  height: 55px; */
+  padding: 2.2rem 3rem;
 }
 
 .footer-middle {
-  padding-top: 3.6rem;
-  margin-bottom: 3.6rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgb(39, 62, 107);
 }
 
 .footer-middle,
@@ -115,20 +102,14 @@ footer {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  border-top: 1px solid #5e5e5e;
-}
-
-.footer-menu {
-  margin-right: 1.4rem;
 }
 
 .footer-menu h3 {
-  font-family: "Georgia", serif;
   display: block;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: rgb(39, 62, 107);
-  margin: 0 0 1.4rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .footer-menu ul {
@@ -138,7 +119,7 @@ footer {
 }
 
 .footer-menu ul li {
-  margin-bottom: 1rem;
+  margin-bottom: .4rem;
 }
 
 .footer-menu a {
@@ -152,11 +133,13 @@ footer {
 }
 
 .footer-menu a:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(71, 100, 157, 0.555);
 }
 
 .footer-bottom {
-  padding-top: 3.6rem;
+  font-family: "Montserrat", sans-serif;
+  padding-top: .6rem;
+  padding-bottom: 2rem;
 }
 
 /* .footer-social {
@@ -164,11 +147,9 @@ footer {
 } */
 
 .footer-social b {
-  margin-right: 2.5rem;
-  font-size: 1.7rem;
-  font-family: "Georgia", serif;
+  margin-right: 1rem;
+  font-size: 1.5rem;
   color: rgb(39, 62, 107);
-  font-weight: bold;
   vertical-align: middle;
 }
 
@@ -191,9 +172,9 @@ footer {
   vertical-align: middle;
   width: 60px;
   height: 60px;
-  /* margin-right: 0.8rem; */
   color: #ffffff;
   background-image: url("./../assets/imgs/sprite.png");
+  
   background-repeat: no-repeat;
 }
 
@@ -212,17 +193,17 @@ footer {
 .footer-copyright {
   color: #47649d;
   text-transform: uppercase;
-  margin-top: 17px;
+  margin-top: 1rem;
 }
 
 .footer-copyright .heart {
   display: inline-block;
   background-image: url("./../assets/imgs/heart_icon.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: contain;
   width: 27px;
-  height: 24px;
+  height: 27px;
   vertical-align: middle;
 }
 
@@ -236,7 +217,44 @@ footer {
 }
 
 .footer-copyright a:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(71, 100, 157, 0.555);
+}
+
+@media (max-width: 992px) {
+  .footer-social b {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-social b {
+    display: none;
+  }
+  .footer-bottom {
+    padding-bottom: 0;
+  }
+  .footer-middle {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-middle .footer-menu ul {
+    display: none;
+  }
+  .footer-bottom {
+    flex-direction: column;
+  }
+  .footer-copyright {
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-middle {
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
 }
 
 </style>

@@ -210,13 +210,23 @@ export default {
 
 .contents .mt-3,
 .my-3 {
-  margin-top: 0 !important;
+  margin: 0 2rem !important;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 576.98px){
+  .contents .mt-3,
+.my-3 {
+  font-size: 1.3rem;
+}
 }
 
 .tabs .nav-tabs .nav-link {
   color: #47649d;
   border-color: transparent transparent rgb(71, 100, 157);
   border-width: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
 }
 
 .tabs .nav-tabs .nav-link.active,
@@ -225,6 +235,7 @@ export default {
   color: rgb(39, 62, 107);
   font-weight: bold;
   border-color: #47649d #47649d transparent;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .tabs .nav-tabs .nav-link:hover,

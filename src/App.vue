@@ -56,12 +56,15 @@ export default {
 }
 
 html {
-  font-size: 14px;
   font-family: 'Pt Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
   direction: ltr;
   box-sizing: border-box;
   }
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
 
 * {
   padding: 0;
@@ -84,10 +87,6 @@ a, a:active {
   justify-content: center; 
 }
 
-.container {
-  padding: 0 calc(50% - 590px);
-}
-
 .product_title {
   margin: 1rem;
 }
@@ -99,7 +98,7 @@ a, a:active {
   text-align: left;  
 }
 
-.picture_field {
+/* .picture_field {
   min-height: 60vh;
   width: 65%;
   margin: 0 1rem;
@@ -107,10 +106,94 @@ a, a:active {
 
 .product_info {
   max-width: 45%;
+  padding-left: 1rem;
+} */
+
+  .picture_field {
+    min-height: 50vh;
+    width: 65%;
+    margin: 0 1rem;
 }
+
+  .product_info {
+    max-width: 35%;
+    padding-left: 1rem;
+  }
 
 .hidden {
   display: none;
 }
+
+.container {
+  padding: 0 15px;
+  max-width: unset !important;
+  margin: unset !important;
+}
+
+@media (max-width: 576px) {
+   html {
+    font-size: 12px;
+  }
+    .container {
+    padding: 0 calc(50vw - 270px);
+    max-width: unset !important;
+    margin: unset !important;
+  }
+
+}
+
+@media (min-width: 575.98px){
+  html {
+    font-size: 12px;
+  }
+  .container {
+    padding: 0 calc(50vw - 260px);
+    max-width: unset !important;
+    margin: unset !important;
+  }
+
+}
+
+@media (min-width: 767.98px){
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 calc(50vw - 370px)!important;
+    max-width: unset !important;
+    margin: unset !important;
+  }
+
+  .picture_field {
+  min-height: 60vh;
+  width: 65%;
+}
+
+  .product_info {
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 991.98px) {
+ 
+  .container {
+    padding: 0 calc(50vw - 480px)!important;
+    max-width: unset !important;
+    margin: unset !important;
+  }
+}
+
+@media (min-width: 1199.98px){
+  html {
+    font-size: 16px;
+  }
+  .container {
+    padding: 0 calc(50vw - 590px)!important;
+    max-width: unset !important;
+    margin: unset !important;
+  }
+}
+
 
 </style>

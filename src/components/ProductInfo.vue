@@ -28,6 +28,7 @@
         v-model="modalShow"
         ok-title="отправить заказ"
         cancel-title="сбросить"
+        title="Заказать"
         @ok="submit"
         @cancel="reset"
       >
@@ -66,7 +67,7 @@ export default {
   name: "ProductInfo",
   data() {
     return {
-      price: "5 785",
+      price: "95 785",
       rating: "100%",
       show: false,
       modalShow: false,
@@ -108,6 +109,8 @@ export default {
 
 /* popup (start) */
 .buy-btn {
+  display: initial; 
+
   font-size: 1.2rem;
   font-weight: 700;
   background: #00a651 !important;
@@ -118,7 +121,7 @@ export default {
   user-select: none;
 
   padding: 0.8rem 1.2rem;
-  margin: 1rem auto 2rem;
+  margin: 2rem auto 2rem;
 
   outline: none;
 }
@@ -211,6 +214,7 @@ export default {
 
 .vet-control {
   display: flex;
+  justify-content: center;
   margin: 1rem 0 1rem;
   font-weight: bold;
 }
@@ -219,7 +223,24 @@ export default {
   height: 46.55px;
   width: 70px;
   display: inline-block;
+  margin-right: 0.5rem;
 }
+
+@media (max-width: 605px){ 
+  .vet-control div {
+    display: none;
+  }
+  .vet-control img {
+    margin-right: 0;
+  }
+
+  .buy-btn {
+  display: block; 
+  margin: 2.5rem auto 1.5rem;
+  }
+
+}
+
 </style>
 
 <style>
@@ -259,5 +280,6 @@ button.btn.btn-secondary:hover {
   border-color: #395346;
   transition: 0.3s;
 }
+
 </style>
 
