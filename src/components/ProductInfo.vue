@@ -4,7 +4,7 @@
       {{price}}
       <span class="price-r">&#8381;</span>
     </h1>
-    <div class="rating">{{rating}}</div>
+    <div ><img :src="rating" alt="" class="rating"></div>
 
     <div class="in_stock_group">
       <div class="in_stock" v-on:click="show = !show">Наличие</div>
@@ -63,12 +63,15 @@
 </template>
 
 <script>
+import rating_icon from "./../assets/imgs/rating_icon_gold.png";
+
 export default {
   name: "ProductInfo",
   data() {
     return {
       price: "95 785",
-      rating: "100%",
+      // rating: "100%",
+      rating: rating_icon,
       show: false,
       modalShow: false,
       form: {
@@ -193,6 +196,10 @@ export default {
 }
 /* collapse (end) */
 
+.rating {
+ width: 100px;
+}
+
 .shipment {
   font-weight: 100;
   color: #727272;
@@ -239,6 +246,28 @@ export default {
   margin: 2.5rem auto 1.5rem;
   }
 
+}
+
+@media (max-width: 490px) {
+  .price {
+    font-size: 2.5rem;
+  }
+
+  .price-r {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 460px) {
+   .buy-btn {
+     padding: 1rem;
+  }
+}
+
+@media (max-width: 440px) {
+   .buy-btn {
+     padding: .6rem;
+  }
 }
 
 </style>
