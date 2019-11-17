@@ -13,5 +13,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  header {
+    background-color: rgba(223, 230, 243, 0.664);
+  }
 </style>

@@ -72,22 +72,23 @@ img {
 }
 
 .swiper-container {
-  background-color: #000;
+  background-color: #fff;
 }
 .swiper-slide {
   background-size: cover;
-  background-position: center;
+  background-position: top;
+  background-repeat: no-repeat;
   &.slide-1 {
-    background-image: url("./../assets/imgs/slide_1.png");
+    background-image: url("./../assets/imgs/slide_1.jpeg");
   }
   &.slide-2 {
-    background-image: url("./../assets/imgs/slide_2.png");
+    background-image: url("./../assets/imgs/slide_2.jpg");
   }
   &.slide-3 {
-    background-image: url("./../assets/imgs/slide_3.png");
+    background-image: url("./../assets/imgs/slide_3.jpg");
   }
   &.slide-4 {
-    background-image: url("./../assets/imgs/slide_4.png");
+    background-image: url("./../assets/imgs/slide_4.jpg");
   }
   &.slide-5 {
     background-image: url("./../assets/imgs/slide_5.jpg");

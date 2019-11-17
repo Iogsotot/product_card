@@ -204,7 +204,7 @@ export default {
 
 .tabs-block {
   margin: 1rem 0;
-  background-color: rgb(214, 240, 238, 0.8);
+  background-color: rgba(223, 230, 243, 0.664);
   padding: 0;
 }
 
@@ -215,7 +215,7 @@ export default {
 
 .tabs .nav-tabs .nav-link {
   color: #47649d;
-  border-color: transparent transparent #47649d;
+  border-color: transparent transparent rgb(71, 100, 157);
   border-width: 1px;
 }
 
