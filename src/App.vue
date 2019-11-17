@@ -127,6 +127,17 @@ a:active {
     max-width: unset !important;
     margin: unset !important;
   }
+    .picture_field {
+    min-height: 60vh;
+    width: 100%;
+  }
+  .product_info {
+    max-width: 100%;
+  }
+  .wrapper {
+    flex-wrap: wrap;
+    text-align: center;
+  }
 }
 
 @media (min-width: 575.98px) {

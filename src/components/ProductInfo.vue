@@ -249,25 +249,28 @@ export default {
   }
 }
 
-@media (max-width: 490px) {
-  .price {
-    font-size: 2.5rem;
+@media (max-width: 576px) {
+   .vet-control {
+     flex-wrap: wrap;
+   }
+   .vet-control div {
+    display: initial;
+    width: 100%;
   }
-
-  .price-r {
-    font-size: 2rem;
+  .vet-control img {
+    margin-right: 0.5rem;
   }
-}
-
-@media (max-width: 460px) {
   .buy-btn {
-    padding: 1rem;
+    display: initial;
+    margin: 1rem auto 1rem;
+    padding: 0.8rem 1.2rem;
   }
-}
-
-@media (max-width: 440px) {
-  .buy-btn {
-    padding: 0.6rem;
+  .in_stock {
+    padding-right: 1rem;
+  }
+  .in_stock_group {
+    text-align: center;
+    text-align: -webkit-center;
   }
 }
 </style>
