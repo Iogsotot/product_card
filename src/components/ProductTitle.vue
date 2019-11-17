@@ -40,7 +40,7 @@ h1 {
   vertical-align: top;
   color: #ffffff;
 
-  background-color: rgba(240, 173, 78); 
+  background-color: rgba(240, 173, 78);
 }
 
 .vendor_code {

@@ -115,5 +115,4 @@ img {
 .gallery-thumbs .swiper-slide-active {
   opacity: 1;
 }
-
 </style>

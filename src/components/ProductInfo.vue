@@ -4,7 +4,9 @@
       {{price}}
       <span class="price-r">&#8381;</span>
     </h1>
-    <div ><img :src="rating" alt="" class="rating"></div>
+    <div>
+      <img :src="rating" alt class="rating" />
+    </div>
 
     <div class="in_stock_group">
       <div class="in_stock" v-on:click="show = !show">Наличие</div>
@@ -112,7 +114,7 @@ export default {
 
 /* popup (start) */
 .buy-btn {
-  display: initial; 
+  display: initial;
 
   font-size: 1.2rem;
   font-weight: 700;
@@ -197,7 +199,7 @@ export default {
 /* collapse (end) */
 
 .rating {
- width: 100px;
+  width: 100px;
 }
 
 .shipment {
@@ -206,7 +208,7 @@ export default {
 }
 
 .shipment_city {
-  margin: .4rem 0 .4rem;
+  margin: 0.4rem 0 0.4rem;
 }
 
 .shipment_city > a {
@@ -233,7 +235,7 @@ export default {
   margin-right: 0.5rem;
 }
 
-@media (max-width: 605px){ 
+@media (max-width: 605px) {
   .vet-control div {
     display: none;
   }
@@ -242,10 +244,9 @@ export default {
   }
 
   .buy-btn {
-  display: block; 
-  margin: 2.5rem auto 1.5rem;
+    display: block;
+    margin: 2.5rem auto 1.5rem;
   }
-
 }
 
 @media (max-width: 490px) {
@@ -259,17 +260,16 @@ export default {
 }
 
 @media (max-width: 460px) {
-   .buy-btn {
-     padding: 1rem;
+  .buy-btn {
+    padding: 1rem;
   }
 }
 
 @media (max-width: 440px) {
-   .buy-btn {
-     padding: .6rem;
+  .buy-btn {
+    padding: 0.6rem;
   }
 }
-
 </style>
 
 <style>
@@ -309,6 +309,5 @@ button.btn.btn-secondary:hover {
   border-color: #395346;
   transition: 0.3s;
 }
-
 </style>
 
